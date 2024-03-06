@@ -9,9 +9,9 @@ function App() {
     <>
       <Information></Information>
       <Education></Education>
-      <Experience></Experience>   
+      <Experience></Experience>
     </>
   )
 }
 
-export default App
+export default App;
