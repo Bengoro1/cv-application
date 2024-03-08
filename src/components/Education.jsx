@@ -6,6 +6,7 @@ export default function Education() {
   if (edit) {
     return (
       <div className='education'>
+        Education
         <label>School name: </label>
         <input
           type='text'
@@ -37,11 +38,11 @@ export default function Education() {
       </div>
     )
   } else return (
-    <div className='information'>
-      <p>{data.name}</p>
-      <p>{data.title}</p>
-      <p>{data.from}</p>
-      <p>{data.to}</p>
+    <div className='education'>
+      Education
+      <p>Name: <br /> {data.name}{'School name: ' + data.name}</p>
+      <p>Name: <br /> {data.name}{'Title of study: ' + data.title}</p>
+      <p>Name: <br /> {data.name}{`Date of study from: ${data.from}  to: ${data.to}`}</p>
       <button onClick={() => setEdit(true)}>
         Edit
       </button>

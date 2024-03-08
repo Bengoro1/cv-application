@@ -6,6 +6,7 @@ export default function Information() {
   if (edit) { 
     return (
       <div className='information'>
+        Personal information
         <label>Name: </label>
         <input 
           type='text'
@@ -37,10 +38,11 @@ export default function Information() {
     )
   } else return (
     <div className='information'>
-      <p>{data.name}</p>
-      <p>{data.email}</p>
-      <p>{data.phone}</p>
-      <p>{data.adress}</p>
+      Personal information
+      <p>Name: <br /> {data.name}</p>
+      <p>E-mail: <br /> {data.email}</p>
+      <p>Mobile Number: <br /> {data.phone}</p>
+      <p>Residence Adress: <br /> {data.adress}</p>
       <button onClick={() => setEdit(true)}>
         Edit
       </button>

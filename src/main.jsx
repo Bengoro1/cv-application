@@ -9,7 +9,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div className='header'>
       CV Application
     </div>
-    <App />
+    <div className='container'>
+      <App />
+    </div>
     <div className='footer'>
       <div className='signature'>
         {`Copyright © Bengoro1 ${new Date().getFullYear()}`}

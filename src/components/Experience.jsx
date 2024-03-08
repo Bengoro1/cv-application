@@ -6,6 +6,7 @@ export default function Experience() {
   if (edit) {
     return (
       <div className='experience'>
+        Working experience
         <label>Company name: </label>
         <input 
           type='text'
@@ -42,11 +43,12 @@ export default function Experience() {
       </div>
     )
   } else return (
-    <div className='information'>
-      <p>{data.name}</p>
-      <p>{data.position}</p>
-      <p>{data.responsibilities}</p>
-      <p>{`Date of employment from: ${data.from} to: ${data.to}`}</p>
+    <div className='experience'>
+      Working experience
+      <p>Name: <br /> {data.name}{data.name}</p>
+      <p>Name: <br /> {data.name}{data.position}</p>
+      <p>Name: <br /> {data.name}{data.responsibilities}</p>
+      <p>Name: <br /> {data.name}{`Date of employment from: ${data.from} to: ${data.to}`}</p>
       <button onClick={() => setEdit(true)}>
         Edit
       </button>
