@@ -18,7 +18,7 @@ export default function Experience() {
           value={data.position}
           onChange={(e) => setData({...data, position: e.target.value})}
         />
-        <label>Main responsibilities</label>
+        <label>Main responsibilities: </label>
         <textarea
           value={data.responsibilities}
           onChange={(e) => setData({...data, responsibilities: e.target.value})}
