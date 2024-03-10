@@ -19,19 +19,21 @@ export default function Education() {
           value={data.title}
           onChange={(e) => setData({...data, title: e.target.value})}
         />
-        <p>Date of study</p>
-        <label>From: </label>
-        <input
-          type='month'
-          value={data.from}
-          onChange={(e) => setData({...data, from: e.target.value})}
-        />
-        <label>To: </label>
-        <input
-          type='month'
-          value={data.to}
-          onChange={(e) => setData({...data, to: e.target.value})}
-        />
+        <div className='date'>
+          <p>Date of study</p>
+          <label>From: </label>
+          <input
+            type='month'
+            value={data.from}
+            onChange={(e) => setData({...data, from: e.target.value})}
+          />
+          <label>To: </label>
+          <input
+            type='month'
+            value={data.to}
+            onChange={(e) => setData({...data, to: e.target.value})}
+          />
+        </div>
         <button onClick={() => setEdit(false)}>
           Save
         </button>
@@ -40,9 +42,9 @@ export default function Education() {
   } else return (
     <div className='education'>
       Education
-      <p>Name: <br /> {data.name}{'School name: ' + data.name}</p>
-      <p>Name: <br /> {data.name}{'Title of study: ' + data.title}</p>
-      <p>Name: <br /> {data.name}{`Date of study from: ${data.from}  to: ${data.to}`}</p>
+      <p>School name: <br /> {data.name}</p>
+      <p>Title of study: <br /> {data.title}</p>
+      <p>{`Date of study from: ${data.from}  to: ${data.to}`}</p>
       <button onClick={() => setEdit(true)}>
         Edit
       </button>

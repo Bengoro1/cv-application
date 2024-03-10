@@ -55,9 +55,9 @@ p {
   font-size: 14px;
 }
 
-input,
-textarea {
+input {
   height: 20px;
+  margin: 6px 0;
 }
 
 button {

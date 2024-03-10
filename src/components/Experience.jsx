@@ -24,19 +24,21 @@ export default function Experience() {
           value={data.responsibilities}
           onChange={(e) => setData({...data, responsibilities: e.target.value})}
         />
-        <p>Date of employment</p>
-        <label>From: </label>
-        <input 
-          type='month'
-          value={data.from}
-          onChange={(e) => setData({...data, from: e.target.value})}
-        />
-        <label>To: </label>
-        <input 
-          type='month'
-          value={data.to}
-          onChange={(e) => setData({...data, to: e.target.value})} 
-        />
+        <div className='date'>
+          <p>Date of employment</p>
+          <label>From: </label>
+          <input 
+            type='month'
+            value={data.from}
+            onChange={(e) => setData({...data, from: e.target.value})}
+          />
+          <label>To: </label>
+          <input 
+            type='month'
+            value={data.to}
+            onChange={(e) => setData({...data, to: e.target.value})} 
+          />
+        </div>
         <button onClick={() => setEdit(false)}>
           Save
         </button>
@@ -45,10 +47,10 @@ export default function Experience() {
   } else return (
     <div className='experience'>
       Working experience
-      <p>Name: <br /> {data.name}{data.name}</p>
-      <p>Name: <br /> {data.name}{data.position}</p>
-      <p>Name: <br /> {data.name}{data.responsibilities}</p>
-      <p>Name: <br /> {data.name}{`Date of employment from: ${data.from} to: ${data.to}`}</p>
+      <p>Company name:: <br /> {data.name}</p>
+      <p>Position title: <br /> {data.position}</p>
+      <p>Main responsibilities: <br /> {data.responsibilities}</p>
+      <p>{`Date of employment from: ${data.from} to: ${data.to}`}</p>
       <button onClick={() => setEdit(true)}>
         Edit
       </button>
